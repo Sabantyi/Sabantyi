@@ -1,0 +1,11 @@
+{
+	"lce": [{
+		"id_error": "1", 
+		"opis_error": "Описание 1",
+		"prich_error": "Причина 1."
+			},{
+		"id_error": "5", 
+		"opis_error": "Описание 5", 
+		"prich_error": "Причина 5."
+		}]
+}

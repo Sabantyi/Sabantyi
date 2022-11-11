@@ -1,0 +1,38 @@
+#:kivy 2.1.0
+#:import SlideTransition kivy.uix.screenmanager.SlideTransition
+#:import GridLayout kivy.uix.gridlayout.GridLayout
+#:import TextInput kivy.uix.textinput
+#:import Label kivy.uix.label
+#:import MDLabel kivymd.uix.label
+
+ScreenManagement:
+    transition: SlideTransition()
+    Lce_InputScreen:
+        id: lce_input
+
+<Lce_InputScreen>
+    name: "lce_input"
+    input_code_out: input_code_out
+    GridLayout:
+        cols: 2
+        padding: 10
+        spacing: 50
+        size_hint_x: .5
+        #TextInput:
+        #    text: root.vod_text
+        MDLabel:
+        #    text: root.check_data_login(vod_text).text
+        MDTextField:
+            id: input_code_out
+            multiline: False
+            max_text_length: 5
+            font_size: 30
+            #hint_text: "Enter you Code"
+            hint_text: root.vod_text
+            adaptive_height: True
+            pos_hint: {"x": .05, "y": .9}
+        MDRaisedButton:
+            text: "Find"
+            font_size: "18sp"
+            on_release:
+                root.check_data_login()
